@@ -1,4 +1,4 @@
-<!-- ## Contenido
+## Contenido
 1. [Información general](#general-info)
 2. [Tecnologías](#technologies)
 3. [Instalación](#installation)
@@ -6,13 +6,12 @@
 5. [FAQs](#faqs)
 ### Información general
 ***
-El proyecto consta de un contador responsive que puede incrementar o decrementar su valor. Se opera mediante mouse o flechas de dirección en PC o por tacto en mobile.
-El proyecto alcanzo un estado de entrega pero se tienen mejoras en mente para futuras versiones.
+El proyecto se trata de un formulario clásico de registro aplicando los conceptos adquiridos y el uso de tecnologías específicas para un manejo eficiente y práctico de la información agregada así como su validación.
 ***
 #### Deploy
-[Contador Responsive](https://fueguinof.github.io/2modClase5/)
+[Formulario Registro](https://fueguinof.github.io/2modClase6/)
 ### Apariencia
-![Captura10](https://i.imgur.com/tntsclR.png)
+![Captura11 screen Formulario](https://i.imgur.com/cHhBWOd.png)
 ## 
 ***
 ### Tecnologías utilizadas
@@ -22,16 +21,18 @@ El proyecto alcanzo un estado de entrega pero se tienen mejoras en mente para fu
 * [FontAwesome Icons](https://fontawesome.com/icons): versión 6.4.2
 * [Framer Motion](https://www.framer.com/motion/): versión 10.16.5
 * [GH-pages](https://www.npmjs.com/package/gh-pages): versión 6.0.0
+* [Formik](https://formik.org/docs/overview): versión 2.4.5
+* [Yup](https://www.npmjs.com/package/yup): versión 1.3.2
 ## Instalación
 ***
 Siga estos sencillos pasos para instalar. 
 ```
-$ git clone https://github.com/FueguinoF/2modClase5.git
+$ git clone https://github.com/FueguinoF/2modClase6.git
 $ cd ../ruta/al/archivo
 $ npm install
 $ npm run dev
 ```
-Cuando el comando se completé clickeá el link en consola y listo!
+Cuando el comando se complete clickeá el link en consola y listo!
 ## Consultas - Sugerencias
 ***
 Si te gustó, compartilo.
@@ -41,23 +42,19 @@ Si te gustó, compartilo.
 
 #### Colaboradores
 >@Pablo Rito - https://github.com/pablorito14
->@Rodrigo Avila -https://github.com/RodriiG28 
+
 ## FAQs
 ***
 Preguntas frecuentes:
 
-1. **Puedo contar ovejas con esto?**
-_Si, esta probado para ganadería e insomnio_
+1. **¿Puedo registrar usuarios con esto?**
+_No realmente, es un ejercicio demostrativo y no registra en una BdD pero si hace manejo de datos y validación mínima necesaria como un formulario debería hacer para un proceso de registro_
 
-2. **Como lo uso?** 
-Seguí estos pasos:
-* Clickeá el botón de incrementar 
-* Incrementa o decrementá tanto como gustes
-* Disfrutá ;)
-3. **Solo se puede usar el mouse?**
-*No, podes utilizar las flechas del teclado también*
-4. **Como hago?**
- * Flecha Arriba ▲ ------------ ▲ Suma +1    
- * Flecha Derecha ► --------- ► Suma rápida 
- * Flecha Abajo ▼ ------------- ▼ Resta - 1   
- * Flecha Izquieda ◄ --------- ◄ Resta rápida  -->
+2. **¿Como lo uso?** 
+_Seguí estos pasos:_
+* Entrá a la página 
+* Completá tus datos
+* Revisá o corregí en base a la validación de ser necesario
+* Envia y disfrutá ;)
+3. **¿Se puede personalizar la validación?**
+*Si, claro. Para eso contás con los esquemas de YUP y su poder.*

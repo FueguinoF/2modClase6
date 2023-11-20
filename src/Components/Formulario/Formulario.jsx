@@ -1,12 +1,13 @@
 import { Alert, AlertDescription, AlertIcon, AlertTitle, Box, Button, Container, 
     Flex,  Heading, Text, useToast } from '@chakra-ui/react';
-import React, { useRef } from 'react';
+import { React } from 'react';
 //import './Formulario.css'; 
 import { Formik } from 'formik';
 import { ref, string, object, boolean} from 'yup';
 import { motion } from 'framer-motion'
 import { MiFormControl } from '../MiFormControl/MiFormControl';
 import { MiFormCtrlPass } from '../MiFormCtrlPass/MiFormCtrlPass';
+import { useState } from "react";
 
 
 const Formulario=()=>{
@@ -24,11 +25,12 @@ const Formulario=()=>{
     }
 
     const toast = useToast();
+    const [enviado,setEnviado] = useState(false)
 
     const formSubmit = (values, {setSubmitting,resetForm}) => {
         setTimeout(() => {
         console.log(values);
-        
+        setEnviado(false);
 
           toast({
             position: 'top',
@@ -57,6 +59,7 @@ const Formulario=()=>{
                         setSubmitting(false);
                         toast.closeAll();
                         resetForm({values:formInitialValues})
+                        setEnviado(true)
                       }}>Aceptar</Button>
     
                   </Flex>
@@ -72,7 +75,7 @@ const Formulario=()=>{
     //yup
 
     const emailPtrn =  /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    const passPtrn = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{10,}$/
+    const passPtrn = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
 
     const fSchema = object ({
         nombre :    string().trim()
@@ -88,8 +91,8 @@ const Formulario=()=>{
                     .matches(/^[1-9]\d{9,}$/,'Revise cantidad de dígitos, sin 0 para área ni 15 para número.')
                     .required('Ingrese su teléfono.'),
         pass :      string()
-                    .matches(passPtrn,'Ingrese contraseña compuesta de al menos 10 carácteres, una letra, un número y un caracter especial ( @ $ ! % * ? & )')
-                    .min(10,'Ingrese al menos 10 caracteres')
+                    .matches(passPtrn,'Ingrese contraseña compuesta de al menos 8 carácteres, una letra, un número y un caracter especial ( @ $ ! % * ? & )')
+                    .min(8,'Ingrese al menos 8 caracteres')
                     .required('Ingrese una contraseña'),
         cPass :     string()
                     .oneOf([ref('pass')],'Revise los datos, las contraseñas no coinciden.')
@@ -123,11 +126,11 @@ const Formulario=()=>{
                                       placeholder='Ingrese su teléfono.' handleChange={handleChange}
                                       handleBlur={handleBlur} isSubmitting={isSubmitting} value={values.tel}/>
                     <MiFormCtrlPass error={errors.pass} touched={touched.pass} 
-                                          label='Contraseña' name='pass'
+                                          label='Contraseña' name='pass' enviado={enviado}
                                           placeholder='Ingrese su contraseña.' handleChange={handleChange}
                                           handleBlur={handleBlur} isSubmitting={isSubmitting} value={values.pass}/>
                     <MiFormCtrlPass error={errors.cPass} touched={touched.cPass} 
-                                          label='Confirmar contraseña' name='cPass'
+                                          label='Confirmar contraseña' name='cPass' enviado={enviado}
                                           placeholder='Repita su contraseña.' handleChange={handleChange}
                                           handleBlur={handleBlur} isSubmitting={isSubmitting} value={values.cPass}/>
                     <Box display='flex' justifyContent='center'>

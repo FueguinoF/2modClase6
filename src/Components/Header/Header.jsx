@@ -1,6 +1,5 @@
 import React from 'react';
-import '../Header/Header.css' 
-import { Box, Link, Heading, textDecoration , Container, Spacer } from "@chakra-ui/react";
+import { Link, Heading, Container } from "@chakra-ui/react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faIdCard } from '@fortawesome/free-solid-svg-icons'; 
 import { motion } from 'framer-motion';

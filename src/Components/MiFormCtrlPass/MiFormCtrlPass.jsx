@@ -1,15 +1,21 @@
-import { Button, FormControl, FormErrorMessage, FormLabel, IconButton, Input, InputGroup, InputRightElement,  } from "@chakra-ui/react";
+import { FormControl, FormErrorMessage, FormLabel, IconButton, Input, InputGroup, InputRightElement,  } from "@chakra-ui/react";
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye, faEyeSlash  } from "@fortawesome/free-regular-svg-icons";
+import { useEffect } from "react";
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons'
  
-const MiFormCtrlPass = ({error,touched,label,name,placeholder,handleChange,handleBlur,isSubmitting,value}) => {
+const MiFormCtrlPass = ({error,touched,label,name,placeholder,handleChange,handleBlur,isSubmitting,value,enviado}) => {
+  
+  useEffect(() => {
+
+    if(enviado){
+      setMostrar(false)
+    }
+
+  },[enviado])
+  
   
   const [mostrar,setMostrar] = useState(false);
   const verPass = () => setMostrar(!mostrar);
-
-
   
   return(
     <FormControl isRequired isInvalid={error && touched} mb={8}>
