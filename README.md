@@ -1,8 +1,8 @@
 ## Contenido
-1. [Información general](#general-info)
-2. [Tecnologías](#technologies)
-3. [Instalación](#installation)
-4. [Colaboraciones](#collaboration)
+1. [Información general](#Información-general)
+2. [Tecnologías utilizadas](#tecnologías-utilizadas)
+3. [Instalación](#instalación)
+4. [Consultas](#consultas)
 5. [FAQs](#faqs)
 ### Información general
 ***
@@ -33,7 +33,10 @@ $ npm install
 $ npm run dev
 ```
 Cuando el comando se complete clickeá el link en consola y listo!
-## Consultas - Sugerencias
+## Consultas 
+Estamos disponibles para ayudarte, contáctanos a contacto@fadesarrollos.com o soporte@fadesarrollos.com
+
+#### Sugerencias y Colaboraciones
 ***
 Si te gustó, compartilo.
 > Si queres colaborar dejame un mensaje. 
