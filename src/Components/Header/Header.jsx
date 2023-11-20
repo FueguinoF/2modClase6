@@ -17,7 +17,7 @@ const Header=()=>{
                     <Container><Heading as='h1' minW={{base:'80',sm:'120',md:'160',lg:'200'}} fontFamily={'Raleway'} fontWeight={'800'} fontSize={{base:'16',sm:'26',md:'36',lg:'46'}} textColor={'white'}>
                         <Link  _hover={{ textDecoration:'none'}}> Formulario </Link></Heading></Container>
                     <Tooltip label={(colorMode === 'light' ?  'Modo Nocturo' :  'Modo Diurno')}>
-                        <IconButton color={'whitesmoke'} bg={'transparent'} _hover={{bg:'transparent'}} onClick={toggleColorMode} as={(colorMode === 'light' ?  MoonIcon :  SunIcon)} /></Tooltip>
+                        <IconButton py={2} color={'whitesmoke'} bg={'transparent'} _hover={{bg:'transparent'}} onClick={toggleColorMode} as={(colorMode === 'light' ?  MoonIcon :  SunIcon)} /></Tooltip>
                 </Container>
                  
         </Container>
