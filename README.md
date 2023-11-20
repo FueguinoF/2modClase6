@@ -11,7 +11,7 @@ El proyecto se trata de un formulario clásico de registro aplicando los concept
 #### Deploy
 [Formulario Registro](https://fueguinof.github.io/2modClase6/)
 ### Apariencia
-![Captura11 screen Formulario](https://i.imgur.com/cHhBWOd.png)
+![Captura11 screen Formulario](https://i.imgur.com/F8JOUaC.png)
 ## 
 ***
 ### Tecnologías utilizadas
