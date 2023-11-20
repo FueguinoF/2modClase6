@@ -52,7 +52,7 @@ const Formulario=()=>{
                       <Text as='strong'>{values.nombre}</Text>, le enviamos un correo con un link de confirmación de su cuenta a <Text as='strong'>{values.email}</Text>. Dicho link tiene validez por 12 hs, pasado dicho lapso deberá comenzar el registro nuevamente. Recuerde revisar la carpeta de SPAM o Correo no deseado en caso de no recibirlo.
                     </Text>
                     <Heading fontSize='md' mt={3}> - - - Aclaracion - - - </Heading>
-                    <Text> Solo para ilustar el objeto se muestra en un console.log() en la linea 26.</Text>
+                    <Text> Solo para ilustar el objeto con los datos del formulario se muestra en un console.log() en la linea 26.</Text>
                   </AlertDescription>
                   <Flex mt={2}>
                     <Button colorScheme="orange" onClick={() => {
@@ -79,10 +79,10 @@ const Formulario=()=>{
 
     const fSchema = object ({
         nombre :    string().trim()
-                    .matches(/^[a-zA-Z]{2,}$/,'Revise los datos, nombre solo con dos o más letras.')
+                    .matches(/^[a-zA-Z]{2,}$/,'Revise los datos, sin números, solo nombre con dos o más letras.')
                     .required('Ingrese su nombre.'),
         apellido :  string().trim()
-                    .matches(/^[a-zA-Z]{2,}$/,'Revise los datos, apellido solo con dos o más letras.')
+                    .matches(/^[a-zA-Z]{2,}$/,'Revise los datos, sin números, solo apellido con dos o más letras.')
                     .required('Ingrese su apellido.'),
         email :     string().trim().lowercase()
                     .matches(emailPtrn,'Revise los datos, formato de mail inválido. Ej: juan@gmail.com')
