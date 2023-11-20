@@ -1,6 +1,7 @@
 import { FormControl, FormErrorMessage, FormLabel, Input } from "@chakra-ui/react"
 
 const MiFormControl = ({error,touched,label,type,name,placeholder,handleChange,handleBlur,isSubmitting,value}) => {
+  
   return(
     <FormControl isRequired isInvalid={error && touched} mb={8}> 
     <FormLabel mb={0}><strong>{label}</strong></FormLabel>

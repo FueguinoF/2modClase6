@@ -3,7 +3,7 @@ import { Alert, AlertDescription, AlertIcon, AlertTitle, Box, Button, Container,
 import { React } from 'react';
 //import './Formulario.css'; 
 import { Formik } from 'formik';
-import { ref, string, object, boolean} from 'yup';
+import { ref, string, object } from 'yup';
 import { motion } from 'framer-motion'
 import { MiFormControl } from '../MiFormControl/MiFormControl';
 import { MiFormCtrlPass } from '../MiFormCtrlPass/MiFormCtrlPass';
